@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | AI Job Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+            <h1>Job Finder</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="job-listings.html">Jobs</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile-container">
+        <h2>My Profile</h2>
+
+        <!-- Basic Details Section -->
+        <form id="profile-form">
+            <h3>Basic Details</h3>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="current-city">Current City:</label>
+                <input type="text" id="current-city" placeholder="Enter your current city">
+            </div>
+
+            <div class="form-group">
+                <label for="hometown">Hometown:</label>
+                <input type="text" id="hometown" placeholder="Enter your hometown">
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" placeholder="Enter your mobile number">
+            </div>
+
+            <!-- Career Preferences Section -->
+            <h3>Your Career Preferences</h3>
+
+            <div class="form-group">
+                <label for="looking-for">Looking For:</label>
+                <select id="looking-for">
+                    <option value="">Select</option>
+                    <option value="job">Job</option>
+                    <option value="internship">Internship</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preferred-locations">Preferred Work Locations:</label>
+                <input type="text" id="preferred-locations" placeholder="Type to search locations..." onkeyup="showSuggestions()">
+                <ul id="location-suggestions"></ul>
+                <div id="selected-locations"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="resume-upload">Upload Resume:</label>
+                <input type="file" id="resume-upload" accept=".pdf, .docx,.csv">
+                <p id="resume-file-name"></p>
+            </div>
+
+            <!-- Save & Cancel Buttons -->
+            <div class="form-buttons">
+                <button type="button" id="cancel-btn">Cancel</button>
+                <button type="button" id="save-btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI Job Recommendation System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
