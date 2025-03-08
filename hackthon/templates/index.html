@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup - Job Portal</title>
+  <!-- Update CSS paths -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/login-signup.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Update image path -->
+      <img src="{{ url_for('static', filename='assets/logo.jpg') }}" alt="Job Portal Logo">
+      <h1>Job Portal</h1>
+    </div>
+  </header>
+
+  <section id="login-signup">
+    <div class="form-container">
+      <!-- Signup Form (Left Side) -->
+      <div id="signup-form">
+        <h2>Sign Up</h2>
+        <form id="signup">
+          <label for="signup-username">Username:</label>
+          <input type="text" id="signup-username" required>
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" required>
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+      </div>
+
+      <!-- Login Form (Right Side) -->
+      <div id="login-form">
+        <h2>Login</h2>
+        <form id="login">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required>
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required>
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Update JavaScript path -->
+  <script src="{{ url_for('static', filename='scripts/login-signup.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Job Details Styles */
+.dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-container h2 {
+    font-size: 2rem;
+    color: #0073e6;
+    margin-bottom: 20px;
+  }
+  
+  .job-card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-5px); /* Move the card up slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+  }
+  
+  .job-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .job-card button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .job-card button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Keyframes for a subtle pulse animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply the pulse animation when a job is applied */
+  .job-card.applied {
+    animation: pulse 0.5s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  
+    .job-card {
+      padding: 15px;
+    }
+  
+    .job-card h3 {
+      font-size: 1.25rem;
+    }
+  
+    .job-card p {
+      font-size: 0.9rem;
+    }
+  
+    .job-card button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }

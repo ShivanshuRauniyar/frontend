@@ -1,0 +1,100 @@
+/* Login/Signup Styles */
+#login-signup {
+    max-width: 396px; /* Reduced width for medium size */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  #signup-form, #login-form {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #756c6c;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  #signup-form {
+    display: none; /* Hide Signup form by default */
+  }
+  
+  #signup-form h2, #login-form h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Logo Styles */
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-image: url("assests/logo.png");
+  }
+  
+  .logo img {
+    height: 60px; /* Adjust logo size */
+    width: 60px; /* Ensure width and height are equal for a perfect circle */
+    border-radius: 70%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+  }
+  .logo img {
+    height: 60px; /* Adjust logo size */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-container {
+      flex-direction: column;
+    }
+  
+    #signup-form, #login-form {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Resume - Job Portal</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/resume-upload.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.jpg" alt="Job Portal Logo">
+      <h1>Job Portal</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="resume-upload.html">Upload Resume</a></li>
+        <li><a href="application-tracker.html">Application Tracker</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="upload">
+    <h2>Upload Resume</h2>
+    <form id="resume-form">
+      <!-- Basic Details -->
+      <div class="form-section">
+        <h3>Basic Details</h3>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <label for="current-city">Current City:</label>
+        <input type="text" id="current-city" required>
+
+        <label for="hometown">Hometown:</label>
+        <input type="text" id="hometown" required>
+
+        <label for="mobile-number">Mobile Number:</label>
+        <input type="tel" id="mobile-number" required>
+      </div>
+
+      <!-- Career Preferences -->
+      <div class="form-section">
+        <h3>Career Preferences</h3>
+        <label for="looking-for">Looking For:</label>
+        <select id="looking-for" required>
+          <option value="">Select</option>
+          <option value="job">Job</option>
+          <option value="internship">Internship</option>
+        </select>
+
+        <label for="preferred-location">Preferred Work Location:</label>
+        <input type="text" id="preferred-location" required>
+      </div>
+
+      <!-- Resume Upload -->
+      <div class="form-section">
+        <h3>Upload Resume</h3>
+        <div class="upload-area">
+          <input type="file" id="resume-upload" accept=".pdf,.doc,.docx" required>
+          <button type="button" id="upload-btn">Upload</button>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+
+    
+  </section>
+
+  <script src="scripts/resume-upload.js"></script>
+</body>
+</html>

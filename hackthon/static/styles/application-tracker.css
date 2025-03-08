@@ -1,0 +1,16 @@
+/* Application Tracker Styles */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .timeline-item {
+    background-color: #e0f7fa;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .timeline-item p {
+    margin: 0;
+  }
